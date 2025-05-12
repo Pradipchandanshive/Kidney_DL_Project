@@ -470,3 +470,79 @@ Traceback (most recent call last):
   File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\utils\rest_utils.py", line 179, in verify_rest_response
     raise MlflowException(
 mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: 'Cookies must be enabled to use GitHub.'
+[2025-05-12 17:00:55,778: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-12 17:00:55,781: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-12 17:00:55,782: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-12 17:00:55,783: INFO: common: created directory at: artifacts]
+[2025-05-12 17:00:55,784: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-12 17:00:55,784: INFO: Data_ingestion_01: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-12 17:01:29,340: INFO: Data_ingestion_01: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-12 17:01:30,417: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-05-12 17:01:30,417: INFO: main: *******************]
+[2025-05-12 17:01:30,418: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-05-12 17:01:30,421: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-12 17:01:30,423: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-12 17:01:30,424: INFO: common: created directory at: artifacts]
+[2025-05-12 17:01:30,425: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-05-12 17:01:31,075: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-12 17:01:31,321: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-12 17:01:31,528: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-05-12 17:01:31,528: INFO: main: *******************]
+[2025-05-12 17:01:31,530: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-05-12 17:01:31,533: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-12 17:01:31,537: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-12 17:01:31,541: INFO: common: created directory at: artifacts]
+[2025-05-12 17:01:31,543: INFO: common: created directory at: artifacts\training]
+[2025-05-12 17:01:31,936: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-12 17:03:24,723: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-12 17:03:25,052: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-05-12 17:03:25,058: INFO: main: *******************]
+[2025-05-12 17:03:25,066: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-05-12 17:03:25,074: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-12 17:03:25,085: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-12 17:03:25,099: INFO: common: created directory at: artifacts]
+[2025-05-12 17:03:25,681: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-12 17:04:28,533: INFO: common: json file saved at: scores.json]
+[2025-05-12 17:04:28,534: INFO: common: json file saved at: scores.json]
+[2025-05-12 17:05:45,274: ERROR: main: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: 'Cookies must be enabled to use GitHub.']
+Traceback (most recent call last):
+  File "c:\MyDLProject\Kidney_DL_Project\main.py", line 51, in <module>
+    model_evalution.main()
+  File "c:\MyDLProject\Kidney_DL_Project\src\cnnClassifier\pipeline\model_eval.py", line 31, in main
+    evaluation.log_into_mlflow()
+  File "c:\MyDLProject\Kidney_DL_Project\src\cnnClassifier\components\model_eval_04.py", line 80, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\keras\save.py", line 339, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\models\model.py", line 665, in log
+    mlflow.tracking._model_registry.fluent._register_model(
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 104, in _register_model
+    raise e
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\tracking\_model_registry\fluent.py", line 92, in _register_model
+    create_model_response = client.create_registered_model(name)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\tracking\client.py", line 2339, in create_registered_model
+    return self._get_registry_client().create_registered_model(name, tags, description)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\tracking\_model_registry\client.py", line 63, in create_registered_model
+    return self.store.create_registered_model(name, tags, description)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\store\model_registry\rest_store.py", line 82, in create_registered_model
+    response_proto = self._call_endpoint(CreateRegisteredModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\store\model_registry\base_rest_store.py", line 44, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\utils\rest_utils.py", line 290, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\anaconda3\envs\kidney\Lib\site-packages\mlflow\utils\rest_utils.py", line 179, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/registered-models/create failed with error code 403 != 200. Response body: 'Cookies must be enabled to use GitHub.'
