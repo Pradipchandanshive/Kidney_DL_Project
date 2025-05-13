@@ -921,3 +921,20 @@ mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/regis
 [2025-05-13 16:50:48,170: INFO: model_eval: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-05-13 17:16:16,810: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.249.86:8080]
+[2025-05-13 17:16:16,812: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-05-13 17:16:16,818: INFO: _internal:  * Restarting with stat]
+[2025-05-13 17:16:23,529: WARNING: _internal:  * Debugger is active!]
+[2025-05-13 17:16:23,532: INFO: _internal:  * Debugger PIN: 532-605-900]
+[2025-05-13 17:17:59,112: INFO: _internal: 127.0.0.1 - - [13/May/2025 17:17:59] "GET / HTTP/1.1" 200 -]
+[2025-05-13 17:23:45,794: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:23:46,788: INFO: _internal: 127.0.0.1 - - [13/May/2025 17:23:46] "POST /predict HTTP/1.1" 200 -]
+[2025-05-13 17:24:33,888: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:24:34,559: INFO: _internal: 127.0.0.1 - - [13/May/2025 17:24:34] "POST /predict HTTP/1.1" 200 -]
+[2025-05-13 17:24:55,704: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:24:56,336: INFO: _internal: 127.0.0.1 - - [13/May/2025 17:24:56] "POST /predict HTTP/1.1" 200 -]
+[2025-05-13 17:25:00,964: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:25:01,779: INFO: _internal: 127.0.0.1 - - [13/May/2025 17:25:01] "POST /predict HTTP/1.1" 200 -]
