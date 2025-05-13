@@ -2,11 +2,11 @@ import sys
 import os 
 sys.path.append(os.getcwd())
 
-from src.cnnClassifier import logger 
-from src.cnnClassifier.utils.common import get_size 
-from src.cnnClassifier.entity.config import DataIngestionConfig 
-from src.cnnClassifier.config.configuration import ConfigurationManager 
-from src.cnnClassifier.components.Data_ingestion_01 import DataIngestion
+from cnnClassifier import logger 
+from cnnClassifier.utils.common import get_size 
+from cnnClassifier.entity.config import DataIngestionConfig 
+from cnnClassifier.config.configuration import ConfigurationManager 
+from cnnClassifier.components.Data_ingestion_01 import DataIngestion
 
 
 STAGE_NAME = "Data Ingestion stage"

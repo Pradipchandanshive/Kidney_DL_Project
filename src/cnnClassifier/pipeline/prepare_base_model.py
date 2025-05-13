@@ -3,9 +3,9 @@ import os
 sys.path.append(os.getcwd()) 
 
 
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier.components.prepare_base_model_02 import PrepareBaseModel
-from src.cnnClassifier import logger
+from cnnClassifier.config.configuration import ConfigurationManager
+from cnnClassifier.components.prepare_base_model_02 import PrepareBaseModel
+from cnnClassifier import logger
 
 
 STAGE_NAME = "Prepare base model"

@@ -2,11 +2,11 @@ import sys
 import os
 sys.path.append(os.getcwd()) 
 
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier.components.model_eval_04 import Evaluation
-from src.cnnClassifier import logger
+from cnnClassifier.config.configuration import ConfigurationManager
+from cnnClassifier.components.model_eval_04 import Evaluation
+from cnnClassifier import logger
 import os
-import mlflow
+#import mlflow
 
 
 STAGE_NAME = "Evaluation stage"
@@ -22,13 +22,13 @@ class EvaluationPipeline:
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
         evaluation.save_score()
-        os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/Pradipchandanshive/Kidney_DL_Project.mlflow"
-        os.environ["MLFLOW_TRACKING_USERNAME"]="Pradipchandanshive"
-        os.environ["MLFLOW_TRACKING_PASSWORD"]="fd872e30a5f152a078820e8a236b9d00765a27fa"
+        # os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/Pradipchandanshive/Kidney_DL_Project.mlflow"
+        # os.environ["MLFLOW_TRACKING_USERNAME"]="Pradipchandanshive"
+        # os.environ["MLFLOW_TRACKING_PASSWORD"]="fd872e30a5f152a078820e8a236b9d00765a27fa"
 
-        # # Set MLflow tracking URI
-        mlflow.set_tracking_uri("https://dagshub.com/Pradipchandanshive/Kidney_DL_Project.mlflow")
-        evaluation.log_into_mlflow()
+        # # # Set MLflow tracking URI
+        # mlflow.set_tracking_uri("https://dagshub.com/Pradipchandanshive/Kidney_DL_Project.mlflow")
+        # evaluation.log_into_mlflow()
 
 
 
